@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Validador de nota</h1>
+    <p>Programa que pede uma nota entre 0 e 10, e informa se é válida ou não.</p>
+    <form>
+        <label>Nota (0 a 10):</label></br>
+        <input id="number" type="number"></br>
+        <p id="error" style="color:rgb(236, 66, 66)"></p>
+        <button onclick="validarNota()"; style="cursor:pointer; background-color: rgb(216, 216, 216); border: 0;  width:50px; height:30px; font-weight: bold;" type="button">Enviar</button>
+    </form>
+    <script>
+        function validarNota(){
+            let number = document.getElementById("number").value;
+
+            if(number < 0 || number > 10){
+                document.getElementById("error").style.color = "red";
+                document.getElementById("error").innerHTML = "A nota: " + number + " é invalida, tente novamente.";
+            }
+            else if(number == ""){
+                document.getElementById("error").style.color = "red";
+                document.getElementById("error").innerHTML = "Insira uma nota!";
+            }
+            else{
+                document.getElementById("error").style.color = "green";
+                document.getElementById("error").innerHTML = "Nota valida! Sua nota foi: " + number;
+            }
+        }
+    </script>
+</body>
+</html>

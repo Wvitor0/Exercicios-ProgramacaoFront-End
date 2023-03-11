@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Soma dos valores e média</h1>
+    <form>
+        <p>Programa que lê 5 números e informa a soma e a média. 
+        </p>
+        <label>Digite cinco números: </label></br>
+        <input id="um" type="number"></br>
+        <input id="dois" type="number"></br>
+        <input id="tres" type="number"></br>
+        <input id="quatro" type="number"></br>
+        <input id="cinco" type="number"></br>
+        <button onclick="calcularMedia()" style="margin-top:20px;" type="button">Mostrar o maior numero</button>
+        <p id="result"></p>
+    </form>
+
+    <script>
+        function calcularMedia(){
+            var number1 = document.getElementById("um").value;
+            var number2 = document.getElementById("dois").value;
+            var number3 = document.getElementById("tres").value;
+            var number4 = document.getElementById("quatro").value;
+            var number5 = document.getElementById("cinco").value;
+
+            var lista = [number1, number2, number3, number4, number5];
+            var soma = 0;
+
+            for(var i = 0; i < lista.length; i++){
+                soma += parseInt(lista[i]);
+            }
+
+            var media = soma/lista.length;
+
+            document.getElementById('result').innerHTML = "A soma dos valores é de " + soma + " e a média é de: " + media;
+        }
+    </script>
+</body>
+</html>

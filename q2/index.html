@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <p>Programa que verifica se o usuario e senha são iguais.</p>
+    <form>
+        <label>Usuário: </label></br>
+        <input id="user" type="text"></br>
+        <label>Senha: </label></br>
+        <input id="senha" type="password">
+        <p id="error" style="color:rgb(236, 66, 66)"></p>
+        <button onclick="validarSenha()"; style="cursor:pointer; background-color: rgb(216, 216, 216); border: 0;  width:50px; height:30px; font-weight: bold;" type="submit">Enviar</button>
+        <script>
+            function validarSenha(){
+                var user = document.getElementById("user").value;
+                var password = document.getElementById("senha").value;
+
+                if(user == password){
+                    alert('Erro: o usuário e a senha não podem ser iguais. Tente novamente!')
+                }
+            }
+        </script>
+    </form>
+</body>
+</html>

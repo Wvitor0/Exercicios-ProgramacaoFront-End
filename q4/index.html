@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="js.js"></script>
+</head>
+<body>
+    <h1>Calculadora de Crescimento Populacional</h1>
+    <p>Programa que calcula a quantidade de anos necessarios para que a populacao de A ultrapasse a de B.</p>
+    <form>
+      <label for="populacaoA">População de A:</label><br>
+      <input type="number" id="populacaoA"><br>
+
+      <label for="taxaA">Taxa de crescimento de A:</label><br>
+      <input type="number" id="taxaA"><br><br>
+
+      <label for="populacaoB">População de B:</label><br>
+      <input type="number" id="populacaoB"><br>
+
+      <label for="taxaB">Taxa de crescimento de B:</label><br>
+      <input type="number" id="taxaB"><br>
+      
+      <button style="margin-top:20px; height:30px;"type="button" onclick="calcular()">Calcular</button>
+    </form>
+    <p id="resultado"></p>
+</body>
+</html>

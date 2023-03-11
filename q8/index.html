@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Némeros ímpares</h1>
+    <p>Programa que mostra apenas os valores impares entre 1 e 50</p>
+    <p id="result"></p>
+    <button onclick="mostrar()"type="button">Mostrar valores ímpares</button>
+    <script>
+        function mostrar() {;
+            var result = document.getElementById('result');
+            var n = '';
+
+            for(var i = 1; i <= 50; i++){
+                if(i % 2 == 1){
+                    n += i + ' ';
+                }
+            }
+            result.innerHTML = n;
+        }
+    </script>
+</body>
+</html>
